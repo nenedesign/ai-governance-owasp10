@@ -17,7 +17,7 @@
         352
       ],
       "parameters": {
-        "content": "## LLM06: Excessive Agency \u2014 HITL Approval Gate\n\nEnforces human-in-the-loop approval for high-impact agentic actions before they execute (OWASP LLM06:2025).\n\n**Flow:**\n1. Agent sends an action request: `action_type`, `action_payload`, `agent_id`, `user_id`\n2. Code node classifies severity by action_type prefix\n3. Low-impact actions (read, search, list, get) execute immediately\n4. High-impact actions (delete, write, send, submit) pause and send a Slack approval request\n5. Human approves or declines in Slack within 30 minutes\n6. Approved: action executes, caller receives 200\n7. Declined or timed out: no action taken, caller receives 403",
+        "content": "## LLM06: Excessive Agency: HITL Approval Gate\n\nEnforces human-in-the-loop approval for high-impact agentic actions before they execute (OWASP LLM06:2025).\n\n**Flow:**\n1. Agent sends an action request: `action_type`, `action_payload`, `agent_id`, `user_id`\n2. Code node classifies severity by action_type prefix\n3. Low-impact actions (read, search, list, get) execute immediately\n4. High-impact actions (delete, write, send, submit) pause and send a Slack approval request\n5. Human approves or declines in Slack within 30 minutes\n6. Approved: action executes, caller receives 200\n7. Declined or timed out: no action taken, caller receives 403",
         "color": 2
       }
     },
@@ -235,7 +235,7 @@
       ],
       "parameters": {
         "method": "POST",
-        "url": "<__PLACEHOLDER_VALUE__Action execution endpoint \u2014 e.g. https://api.yourservice.com/actions/execute__>",
+        "url": "<__PLACEHOLDER_VALUE__Action execution endpoint: e.g. https://api.yourservice.com/actions/execute__>",
         "sendBody": true,
         "contentType": "json",
         "specifyBody": "json",

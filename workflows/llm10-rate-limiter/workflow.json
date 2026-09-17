@@ -17,7 +17,7 @@
         256
       ],
       "parameters": {
-        "content": "## LLM10: Unbounded Consumption \u2014 Rate Limiter\n\nEnforces per-user sliding-window rate limits on LLM API calls to prevent unbounded consumption (OWASP LLM10:2025).\n\n**Flow:**\n1. Webhook receives POST with `user_id` and `prompt`\n2. Sliding window counter checks requests in the past 60 seconds per user\n3. Within limit: forwards to LLM API, returns response with rate limit headers\n4. Over limit: returns 429 with `Retry-After` header\n\nRate limit state uses `$workflow.staticData` \u2014 persists across executions within this workflow instance.",
+        "content": "## LLM10: Unbounded Consumption: Rate Limiter\n\nEnforces per-user sliding-window rate limits on LLM API calls to prevent unbounded consumption (OWASP LLM10:2025).\n\n**Flow:**\n1. Webhook receives POST with `user_id` and `prompt`\n2. Sliding window counter checks requests in the past 60 seconds per user\n3. Within limit: forwards to LLM API, returns response with rate limit headers\n4. Over limit: returns 429 with `Retry-After` header\n\nRate limit state uses `$workflow.staticData`: persists across executions within this workflow instance.",
         "color": 2
       }
     },
@@ -45,7 +45,7 @@
         256
       ],
       "parameters": {
-        "content": "## Rate Limit Configuration\n\nEdit these constants at the top of \"Check Rate Limit\":\n\n`WINDOW_SECONDS = 60` \u2014 rolling window duration\n`MAX_REQUESTS = 10` \u2014 max requests per user per window\n\nFor production: replace `$workflow.staticData` with a Redis or Postgres node to share state across workflow instances.",
+        "content": "## Rate Limit Configuration\n\nEdit these constants at the top of \"Check Rate Limit\":\n\n`WINDOW_SECONDS = 60`: rolling window duration\n`MAX_REQUESTS = 10`: max requests per user per window\n\nFor production: replace `$workflow.staticData` with a Redis or Postgres node to share state across workflow instances.",
         "color": 1
       }
     },
@@ -156,7 +156,7 @@
       ],
       "parameters": {
         "method": "POST",
-        "url": "<__PLACEHOLDER_VALUE__LLM API endpoint \u2014 e.g. https://api.anthropic.com/v1/messages__>",
+        "url": "<__PLACEHOLDER_VALUE__LLM API endpoint: e.g. https://api.anthropic.com/v1/messages__>",
         "authentication": "genericCredentialType",
         "genericAuthType": "httpBearerAuth",
         "sendHeaders": true,

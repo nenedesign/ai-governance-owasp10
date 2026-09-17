@@ -3,7 +3,7 @@
   "createdAt": "2026-09-06T16:05:39.817Z",
   "id": "2Wq0hmWCYHKjsq1e",
   "name": "LLM01: Prompt Injection Scanner",
-  "description": "OWASP LLM01:2025 \u2014 Scans incoming user prompts for injection attack patterns before they reach the model. Blocks requests with a risk score of 2 or higher and returns 400 with matched categories. Forwards clean prompts to the LLM API.",
+  "description": "OWASP LLM01:2025: Scans incoming user prompts for injection attack patterns before they reach the model. Blocks requests with a risk score of 2 or higher and returns 400 with matched categories. Forwards clean prompts to the LLM API.",
   "active": false,
   "isArchived": false,
   "nodes": [
@@ -20,7 +20,7 @@
         "content": {
           "config": {
             "name": "LLM01 Overview",
-            "content": "## LLM01 \u2014 Prompt Injection Scanner\n\nScans incoming user prompts for injection attack patterns before they reach the model.\n\n**Flow:**\n1. Receive POST with `user_id` and `input`\n2. Normalize request fields\n3. Scan for injection patterns (regex + risk scoring)\n4. Blocked (score 2+): return 400 with matched categories\n5. Allowed (score < 2): forward to LLM API and return 200\n\n**Pattern categories detected:**\n- Instruction override (ignore previous instructions)\n- Role-play attacks (act as, you are now)\n- Privilege escalation (developer mode, jailbreak, DAN mode)\n- System prompt delimiters (<|system|>, [INST], <<SYS>>)\n- Prompt leakage (reveal system prompt)\n\n**Risk addressed:** OWASP LLM01:2025 Prompt Injection\n**Source:** OWASP Top 10 for LLM Applications v2.0 (March 2025)",
+            "content": "## LLM01: Prompt Injection Scanner\n\nScans incoming user prompts for injection attack patterns before they reach the model.\n\n**Flow:**\n1. Receive POST with `user_id` and `input`\n2. Normalize request fields\n3. Scan for injection patterns (regex + risk scoring)\n4. Blocked (score 2+): return 400 with matched categories\n5. Allowed (score < 2): forward to LLM API and return 200\n\n**Pattern categories detected:**\n- Instruction override (ignore previous instructions)\n- Role-play attacks (act as, you are now)\n- Privilege escalation (developer mode, jailbreak, DAN mode)\n- System prompt delimiters (<|system|>, [INST], <<SYS>>)\n- Prompt leakage (reveal system prompt)\n\n**Risk addressed:** OWASP LLM01:2025 Prompt Injection\n**Source:** OWASP Top 10 for LLM Applications v2.0 (March 2025)",
             "color": 2,
             "position": [
               -580,

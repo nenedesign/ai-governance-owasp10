@@ -3,7 +3,7 @@
   "createdAt": "2026-09-06T16:08:36.689Z",
   "id": "m017FbFT4EiclGRb",
   "name": "LLM02: PII Detector",
-  "description": "OWASP LLM02:2025 \u2014 Scans raw LLM output for PII (email, phone, SSN, SIN, credit card, postal code, IP address) and replaces matches with [REDACTED:category] placeholders before the response reaches end users.",
+  "description": "OWASP LLM02:2025: Scans raw LLM output for PII (email, phone, SSN, SIN, credit card, postal code, IP address) and replaces matches with [REDACTED:category] placeholders before the response reaches end users.",
   "active": false,
   "isArchived": false,
   "nodes": [
@@ -20,7 +20,7 @@
         "content": {
           "config": {
             "name": "LLM02 Overview",
-            "content": "## LLM02 \u2014 PII Detector and Redactor\n\nScans raw LLM output for personally identifiable information before it reaches end users, and replaces detected PII with category-labeled placeholders.\n\n**Flow:**\n1. Receive POST with `user_id` and `llm_output` (raw model response)\n2. Normalize request fields\n3. Scan output against PII regex patterns (email, phone, SSN, SIN, credit card, postal code, IP address)\n4. Redact all matches with [REDACTED:category] placeholders\n5. Return sanitized output + redaction summary\n\n**Why post-inference:** The model may reproduce PII from its training data or context window. Prompt instructions cannot guarantee omission \u2014 output-layer filtering is required.\n\n**Risk addressed:** OWASP LLM02:2025 Sensitive Information Disclosure\n**Source:** OWASP Top 10 for LLM Applications v2.0 (March 2025)",
+            "content": "## LLM02: PII Detector and Redactor\n\nScans raw LLM output for personally identifiable information before it reaches end users, and replaces detected PII with category-labeled placeholders.\n\n**Flow:**\n1. Receive POST with `user_id` and `llm_output` (raw model response)\n2. Normalize request fields\n3. Scan output against PII regex patterns (email, phone, SSN, SIN, credit card, postal code, IP address)\n4. Redact all matches with [REDACTED:category] placeholders\n5. Return sanitized output + redaction summary\n\n**Why post-inference:** The model may reproduce PII from its training data or context window. Prompt instructions cannot guarantee omission: output-layer filtering is required.\n\n**Risk addressed:** OWASP LLM02:2025 Sensitive Information Disclosure\n**Source:** OWASP Top 10 for LLM Applications v2.0 (March 2025)",
             "color": 2,
             "position": [
               -560,
