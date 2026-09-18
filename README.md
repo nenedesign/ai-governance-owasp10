@@ -92,4 +92,4 @@ Original content in this repository is licensed under the [MIT License](LICENSE)
 
 ## About
 
-Built by [Neville Ko](https://www.linkedin.com/in/nevilleko/) · [GitHub](https://github.com/nenedesign), AI Product Manager and Builder at [Distinct AI](https://www.fromus.ca/ai-builds).
+Built by [Neville Ko](https://www.linkedin.com/in/nevilleko/) · [GitHub](https://github.com/nenedesign), AI Product Manager, Designer & Builder at [Distinct AI](https://www.fromus.ca/ai-builds).
